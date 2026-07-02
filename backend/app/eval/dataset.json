@@ -1,0 +1,14 @@
+[
+  {"subject": "Refund for double charge", "body": "I was charged twice for my invoice this month, please refund the duplicate payment.", "category": "billing", "priority": "high"},
+  {"subject": "Card declined", "body": "My credit card keeps getting declined when I try to pay my invoice.", "category": "billing", "priority": "high"},
+  {"subject": "App crashes on startup", "body": "The app crashes with a 500 error every time I open it. It is completely broken.", "category": "technical_issue", "priority": "high"},
+  {"subject": "Export button not working", "body": "When I click export nothing happens, the feature fails silently with a bug.", "category": "technical_issue", "priority": "high"},
+  {"subject": "Cannot log in", "body": "I forgot my password and the account is now locked after several sign in attempts.", "category": "account", "priority": "medium"},
+  {"subject": "Reset password", "body": "How do I reset my password? I can't access my account.", "category": "account", "priority": "medium"},
+  {"subject": "Please add dark mode", "body": "It would be nice if you could add a dark mode feature, just a suggestion.", "category": "feature_request", "priority": "low"},
+  {"subject": "Feature request: CSV import", "body": "Please add the ability to import data from CSV files. This feature would help a lot.", "category": "feature_request", "priority": "low"},
+  {"subject": "Absolutely terrible service", "body": "This is the worst, unacceptable experience. I am angry about how my complaint was handled.", "category": "complaint", "priority": "high"},
+  {"subject": "Disappointed", "body": "Your support has been terrible and unacceptable, I want to file a complaint.", "category": "complaint", "priority": "high"},
+  {"subject": "Business hours", "body": "What are your business hours and where are you located?", "category": "general_inquiry", "priority": "medium"},
+  {"subject": "How does the trial work", "body": "Can you explain how the free trial works and what is included?", "category": "general_inquiry", "priority": "medium"}
+]
