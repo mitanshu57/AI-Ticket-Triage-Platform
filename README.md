@@ -6,22 +6,6 @@ observability.
 
 > **Architecture decisions** are documented in [`docs/adr/`](docs/adr/).
 
-## Status
-
-**All phases complete.** Full-stack AI ticket triage: Next.js dashboard →
-FastAPI → async ARQ worker → Claude + RAG, with end-to-end observability, an
-offline eval pipeline, and CI. See [`docs/architecture.md`](docs/architecture.md).
-
-| Phase | Scope | State |
-|-------|-------|-------|
-| 1 | FastAPI + Postgres + Docker Compose + ticket CRUD | ✅ |
-| 2 | Inline Claude classification + draft replies | ✅ |
-| 3 | Async processing (Redis + ARQ), WebSocket live updates | ✅ |
-| 4 | RAG over past tickets + KB (pgvector) | ✅ |
-| 5 | OpenTelemetry + Prometheus + Grafana + Langfuse | ✅ |
-| 6 | Next.js dashboard, LLM eval pipeline, CI/CD | ✅ this scaffold |
-| 6 | Eval pipeline, CI/CD, deploy, Next.js polish | ⏳ |
-
 ## Tech stack (Phase 1)
 
 - **Backend:** FastAPI (async), SQLAlchemy 2.0 (async) + asyncpg, Pydantic v2
