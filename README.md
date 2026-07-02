@@ -6,7 +6,7 @@ observability.
 
 > **Architecture decisions** are documented in [`docs/adr/`](docs/adr/).
 
-## Tech stack (Phase 1)
+## Tech stack 
 
 - **Backend:** FastAPI (async), SQLAlchemy 2.0 (async) + asyncpg, Pydantic v2
 - **Database:** PostgreSQL 16 with the `pgvector` extension (enabled now, used in Phase 4)
@@ -88,7 +88,7 @@ required to run the suite.
 | POST   | `/api/v1/tickets/{id}/triage` | Run AI triage (async if a worker is up) |
 | WS     | `/ws/tickets`        | Live stream of ticket events |
 
-## AI triage (Phase 2)
+## AI triage 
 
 `POST /api/v1/tickets/{id}/triage` runs the triage pipeline and fills in
 `category`, `priority`, `sentiment`, `assigned_team`, `ai_summary`, and
@@ -103,7 +103,7 @@ required to run the suite.
   `StubTriageEngine` is used — so the pipeline (and the test suite) runs with no
   network or credentials. Set the key in `.env` to use real Claude.
 
-## Async processing + realtime (Phase 3)
+## Async processing + realtime 
 
 Triage now runs off the request path (ADR-0005) and results stream live (ADR-0008):
 
@@ -126,7 +126,7 @@ Behavior by configuration:
 
 `docker compose up` runs Postgres, Redis, the API, and the worker together.
 
-## RAG / cited replies (Phase 4)
+## RAG / cited replies 
 
 Triage now retrieves grounding context before drafting (ADR-0004/0007):
 
@@ -153,7 +153,7 @@ Pluggable, offline-friendly building blocks:
 | POST   | `/api/v1/kb` | Add a KB article (embedded + indexed) |
 | GET    | `/api/v1/kb` | List KB articles |
 
-## Observability (Phase 5)
+## Observability 
 
 End-to-end visibility across the stack (ADR-0008):
 
@@ -178,7 +178,7 @@ test suite run with zero observability infra.
 UIs after `docker compose up`: Grafana → http://localhost:3001, Prometheus →
 http://localhost:9090, Jaeger → http://localhost:16686.
 
-## Frontend (Phase 6)
+## Frontend 
 
 A **Next.js 14 (App Router) + TypeScript** dashboard (`frontend/`): submit
 tickets, view AI classification + cited draft replies + `needs_review` flags,
