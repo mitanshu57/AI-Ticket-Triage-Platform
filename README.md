@@ -7,7 +7,7 @@ observability.
 ## Tech stack 
 
 - **Backend:** FastAPI (async), SQLAlchemy 2.0 (async) + asyncpg, Pydantic v2
-- **Database:** PostgreSQL 16 with the `pgvector` extension (enabled now, used in Phase 4)
+- **Database:** PostgreSQL 16 with the `pgvector` extension
 - **Migrations:** Alembic
 - **Tests:** pytest + pytest-asyncio + httpx
 - **Runtime:** Docker Compose
