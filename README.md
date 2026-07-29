@@ -72,7 +72,7 @@ required to run the suite.
             └── tickets/      # ticket CRUD: models, schemas, service, router
 ```
 
-## API (Phase 1)
+## API 
 
 | Method | Path | Description |
 |--------|------|-------------|
@@ -92,7 +92,7 @@ required to run the suite.
 `category`, `priority`, `sentiment`, `assigned_team`, `ai_summary`, and
 `ai_draft_reply`, advancing the ticket from `new` to `open`.
 
-- **Tiered models (ADR-0006):** `claude-haiku-4-5` for classification (cheap,
+- **Tiered models :** `claude-haiku-4-5` for classification (cheap,
   high-volume, validated via structured output) and `claude-opus-4-8` for reply
   drafting (strong reasoning).
 - **Provider abstraction:** all LLM access goes through `TriageEngine`, so the
@@ -153,7 +153,7 @@ Pluggable, offline-friendly building blocks:
 
 ## Observability 
 
-End-to-end visibility across the stack (ADR-0008):
+End-to-end visibility across the stack :
 
 - **Distributed tracing (OpenTelemetry → Collector → Jaeger):** FastAPI,
   SQLAlchemy, Redis, and HTTP clients are auto-instrumented; custom spans wrap
@@ -187,9 +187,9 @@ and watch triage land **live** over the WebSocket. Types mirror the API
 cd frontend && npm install && npm run dev     # http://localhost:3000
 ```
 
-## LLM evaluation pipeline (Phase 6, ADR-0010)
+## LLM evaluation pipeline
 
-Offline, quantified model-quality measurement — rare in portfolio projects:
+Offline, quantified model-quality measurement :
 
 ```bash
 cd backend && python -m app.eval.run          # accuracy, P/R/F1, confusion
