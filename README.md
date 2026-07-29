@@ -4,8 +4,6 @@ A full-stack platform that auto-classifies, prioritizes, routes, and drafts
 replies for support tickets using LLMs + RAG — instrumented end-to-end for
 observability.
 
-> **Architecture decisions** are documented in [`docs/adr/`](docs/adr/).
-
 ## Tech stack 
 
 - **Backend:** FastAPI (async), SQLAlchemy 2.0 (async) + asyncpg, Pydantic v2
